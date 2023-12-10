@@ -1,8 +1,13 @@
 import { Drawer } from "expo-router/drawer";
 import { Image, View, Text } from "react-native";
 import icons from "../constants/icons";
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { DrawerItemList } from "@react-navigation/drawer";
+import tw from 'twrnc';
 
 // const home = require("../assets/icons/home.png");
 
@@ -15,14 +20,17 @@ export default function layout() {
           drawerLabel: "Home",
           title: "Home",
           drawerIcon: () => (
-            <Image
-              source={icons.home}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <Ionicons name="home" size={20} color="black" />
+          ),
+        }}
+      />
+        <Drawer.Screen
+        name="profile"
+        options={{
+          drawerLabel: "Profile",
+          title: "Profile",
+          drawerIcon: () => (
+            <FontAwesome name="user-circle-o" size={20} color="black" />
           ),
         }}
       />
@@ -32,14 +40,7 @@ export default function layout() {
           drawerLabel: "Setting",
           title: "Setting",
           drawerIcon: () => (
-            <Image
-              source={icons.setting}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <Ionicons name="settings" size={20} color="black" />
           ),
         }}
       />
@@ -49,14 +50,7 @@ export default function layout() {
           drawerLabel: "About",
           title: "about",
           drawerIcon: () => (
-            <Image
-              source={icons.about}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <Ionicons name="ios-information-circle-outline" size={20} color="black" />
           ),
         }}
       />
@@ -66,14 +60,7 @@ export default function layout() {
           drawerLabel: "Rateus",
           title: "Rateus",
           drawerIcon: () => (
-            <Image
-              source={icons.rate}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <Ionicons name="star-outline" size={20} color="black" />
           ),
         }}
       />
@@ -83,14 +70,7 @@ export default function layout() {
           drawerLabel: "HelpCenter",
           title: "HelpCenter",
           drawerIcon: () => (
-            <Image
-              source={icons.help}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <AntDesign name="customerservice" size={20} color="black" />
           ),
         }}
       />
@@ -100,14 +80,7 @@ export default function layout() {
           drawerLabel: "PrivacyPolicy",
           title: "PrivacyPolicy",
           drawerIcon: () => (
-            <Image
-              source={icons.policy}
-              resizeMode="contain"
-              style={{
-                height: 20,
-                width: 20,
-              }}
-            />
+            <MaterialIcons name="local-police" size={20} color="black" />
           ),
         }}
       />
