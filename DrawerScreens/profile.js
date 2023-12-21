@@ -31,7 +31,7 @@ export default function ProfileScreen(){
             <View style={tw`flex-row justify-center mt-5`}>
               
               <TouchableOpacity style={tw`font-semibold text-orange-400`} 
-              onPress={() => navigation.navigate("Helpcenter")}><Text>Update your profile info</Text></TouchableOpacity>
+              onPress={() => navigation.navigate("Helpcenter")}><Text style={tw`text-blue-700 underline underline-offset-2 `}>Update your profile info</Text></TouchableOpacity>
             </View>
           </View>
         </View>
